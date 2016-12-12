@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/circle.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="information-icon"  viewBox="0 0 22.375 22.375">
+        <path d="M362.4,197h-3.62l-3.79,3.79h0a1.4,1.4,0,0,1-1.98,0h0L349.22,197H345.6a2.8,2.8,0,0,1-2.8-2.8V181.6a2.8,2.8,0,0,1,2.8-2.8h16.8a2.8,2.8,0,0,1,2.8,2.8v12.6A2.8,2.8,0,0,1,362.4,197Zm0-14a1.4,1.4,0,0,0-1.4-1.4H347a1.4,1.4,0,0,0-1.4,1.4v9.8a1.4,1.4,0,0,0,1.4,1.4h2.8a1.4,1.4,0,0,1,.99.41h0l3.21,3.209,3.21-3.209h0a1.392,1.392,0,0,1,.99-0.41H361a1.4,1.4,0,0,0,1.4-1.4V183Zm-4.2,8.4h-8.4a1.4,1.4,0,0,1,0-2.8h8.4A1.4,1.4,0,1,1,358.2,191.4Zm0-4.2h-8.4a1.4,1.4,0,0,1,0-2.8h8.4A1.4,1.4,0,1,1,358.2,187.2Z" transform="translate(-342.813 -178.813)"/>
+    </symbol>
+    <symbol id="rating-icon"  viewBox="0 0 19 21">
+        <path d="M543.993,190.308a4.8,4.8,0,0,1-4.747,4.849,4.657,4.657,0,0,1-3.774-1.957l-0.023.017-0.949-1.293-0.95,1.293-0.013-.01a4.693,4.693,0,0,1-3.784,1.95,4.8,4.8,0,0,1-4.746-4.849,4.876,4.876,0,0,1,.962-2.9l-0.013-.01s6.962-8.406,8.544-8.406,8.543,8.406,8.543,8.406l-0.013.01A4.876,4.876,0,0,1,543.993,190.308Zm-11.075,6.465v-1.616a1.582,1.582,0,1,1,3.164,0v1.616a1.617,1.617,0,0,1,0,3.234h-3.164A1.617,1.617,0,0,1,532.918,196.773Z" transform="translate(-525 -179)"/>
+    </symbol>
+    <symbol id="buy-icon" viewBox="0 0 20 20">
+        <path d="M722.946,186.765l0.024,0.006-2.5,11.25-0.024-.006a1.231,1.231,0,0,1-1.2.984h-12.5a1.231,1.231,0,0,1-1.2-.984l-0.024.006-2.5-11.25,0.024-.006A1.176,1.176,0,0,1,703,186.5a1.25,1.25,0,0,1,1.25-1.25h2.5a6.25,6.25,0,1,1,12.5,0h2.5A1.25,1.25,0,0,1,723,186.5,1.176,1.176,0,0,1,722.946,186.765ZM713,181.5a3.75,3.75,0,0,0-3.75,3.751h7.5A3.75,3.75,0,0,0,713,181.5Zm5,8.751A1.251,1.251,0,0,1,716.75,189V187.75h-7.5V189a1.25,1.25,0,1,1-2.5,0V187.75h-0.942l1.945,8.749h10.494l1.945-8.749H719.25V189A1.251,1.251,0,0,1,718,190.25Z" transform="translate(-703 -179)"/>
+    </symbol>
+    <symbol id="rating-stars" viewBox="0 0 19.25 18.125">
+        <path d="M411.335,594.3l4.715-2.235,4.815,2.26c-0.607-.285,1.566,1.241,1.365-0.876-0.192-2.036-.5-5.306-0.5-5.306l3.488-3.884c-0.56.623,1.54-1.079-.415-1.448-1.977-.372-5.52-0.634-5.52-0.634s-1.409-3.255-2.449-5.055c0.484,0.838-.549-1.851-1.587-0.039s-2.544,5.108-2.544,5.108-3.436.268-5.414,0.647c0.775-.148-1.81-0.08-0.5,1.375l3.57,3.953s-0.3,3.284-.484,5.319C409.925,592.961,409.2,595.313,411.335,594.3Z" transform="translate(-406.406 -576.469)"/>
+    </symbol>
+</svg>
+    <!-- BEGIN card  -->
+    <section class="card">
+        <header class="card-head">
+            <div class="card-nav">
+                <ul class="card-menu">
+                    <li class="card-menu__item js-card-active">
+                        <svg class="card-menu__icon">
+                           <use xlink:href="#information-icon" /> 
+                        </svg>
+                        Information
+                    </li>
+                    <li class="card-menu__item">
+                        <svg class="card-menu__icon">
+                            <use xlink:href="#rating-icon" />
+                        </svg>
+                        Rating info
+                    </li>
+                    <li class="card-menu__item">
+                        <svg class="card-menu__icon">
+                            <use xlink:href="#buy-icon" />
+                        </svg>
+                        Where to buy
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="card-main">
+            <div class="information tabs-content js-card-active">
+                <div class="information__left">
+                    <img class="information__img" src="img/information-img.jpg" alt="Far Cry 4">
+                    <div class="rating">
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="information__right">
+                    <div class="information__head">
+                        <div class="information__head-wrap">
+                            <h3 class="information__title">Far cry 4</h3>
+                            <p class="information__subtitle">First Released Nov 17, 2014</p>
+                        </div>
+                        <div class="scope">
+                        	<!-- Change class p78 for scope value (p79 , p80 etc.) -->
+                           	<div class="c100 p78 small">
+								<span class="scope__value">7.8</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+                        		
+                        	</div>
+						</div>
+                    </div>
+                    <p>In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima layas struggling under the regime of a despotic self-appointed king.</p>
+                    <div class="information__foot">
+                        <div class="price">
+                            <div class="price__discount">20%OFF!</div>
+                            <div class="price__value">$59.96</div>
+                        </div>
+                        <a href="#" class="btn information__btn">Buy it now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="information tabs-content">
+                <div class="information__left">
+                    <img class="information__img" src="img/information-img.jpg" alt="Far Cry 4">
+                    <div class="rating">
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="information__right">
+                    <div class="information__head information__head--rating">
+                        <div class="information__head-wrap">
+                            <h3 class="information__title">Rating info</h3>
+                        </div>
+                    </div>
+                    <div class="rating-info">
+                        <h5 class="rating-info__title">Players rating</h5>
+                        <div class="rating-info__item">
+                        	<!-- Change width for rating-info text (79% , 80% etc.) -->
+                            <p class="rating-info__value" style="width: 85%">
+                            	<span class="rating-info__text"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END ratings-info -->
+                    <div class="rating-info">
+                        <h5 class="rating-info__title">Critics rating</h5>
+                        <div class="rating-info__item">
+                       		 <!-- Change width for rating-info text (79% , 80% etc.) -->
+                            <p class="rating-info__value" style="width: 80%">
+                            	<span class="rating-info__text"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END ratings-info -->
+                    <div class="rating-info">
+                        <h5 class="rating-info__title">Expectations</h5>
+                    	<span class="rating-info__text rating-info__text--wait"></span>
+                        <div class="rating-info__item rating-info__item--wait">
+                        	<!-- Change width for rating-info text (79% , 80% etc.) -->
+                            <p class="rating-info__value rating-info__value--wait" style="width: 95%"></p>
+                        </div>
+                    </div>
+                    <!-- END ratings-info -->
+                    <div class="information__foot">
+                        <div class="price">
+                            <div class="price__discount">20%OFF!</div>
+                            <div class="price__value">$59.96</div>
+                        </div>
+                        <a href="#" class="btn information__btn">Buy it now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="information tabs-content">
+                <div class="information__left">
+                    <img class="information__img" src="img/information-img.jpg" alt="Far Cry 4">
+                    <div class="rating">
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon rating__icon--active">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                        <svg class="rating__icon">
+                            <use xlink:href="#rating-stars" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="information__right">
+                    <div class="information__head">
+                        <div class="information__head-wrap">
+                            <h3 class="information__title">You can buy</h3>
+                        </div>
+                    </div>
+                    <p>Address</p>
+                    <p>Address</p>
+                    <p>Address</p>
+                    <p>Address</p>
+                    <div class="information__foot">
+                        <div class="price">
+                            <div class="price__discount">20%OFF!</div>
+                            <div class="price__value">$59.96</div>
+                        </div>
+                        <a href="#" class="btn information__btn">Buy it now</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- END card -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+@import 'variables';
+
+/* -----------------------------------------
+ GLOBAL
+----------------------------------------- */
+html {
+    height: 100%;
+}
+body, html {
+    min-height: 100%;
+}
+body {
+	position: relative;
+	font: 400 14px/1.5 'Lato', Arial, sans-serif;
+	color: $white-color;
+	background: $white-color url('../img/body-bg.jpg') 50% no-repeat;
+	background-size: cover;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0 32px;
+	height: 55px;
+	line-height: 51px;
+	border: 2px solid $green-color;
+	border-radius: 2px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: $green-color;
+	color: $white-color;
+	transition: all 0.2s ease-in-out;
+	
+	&:hover {
+		border-color: currentColor;
+		background-color: transparent;
+		color: $green-color;
+	}
+}
+
+.tabs-content {
+	display: none;
+}
+
+.js-card-active {
+	display: block;
+}
+
+
+/* -----------------------------------------
+ CARD
+----------------------------------------- */
+.card {
+	margin: 70px auto 0;
+	max-width: 600px;
+	box-shadow: 0 23px 57px rgba(0, 0, 0, 0.4);
+	background-color: $card-bg-color;
+	color: $card-text-color;
+	
+}
+
+.card-head {
+	padding-top: 30px;
+	background-color: $card-head-bg-color;
+	color: rgba($card-text-color, 0.7);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.card-menu {
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	
+	&__item {
+		position: relative;
+		display: inline-block;
+		padding: 0 15px 32px;
+		font-size: 16px;
+		
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $white-color;
+			transition: all 0.3s ease-in-out;
+			
+		}
+		
+		&:hover,
+		&.js-card-active {
+			color: #fbfbfb;
+			
+			.card-menu__icon {
+				fill: $white-color;
+			}
+
+			&:after {
+				width: 100%;
+			}
+		}
+
+	}
+
+	&__icon {
+		display: block;
+		margin: 0 auto 13px;
+		width: 22px;
+		height: 22px;
+		fill: rgba($card-text-color, 0.7);
+		fill-rule: evenodd;
+
+	}
+}
+
+.card-main {
+	padding: 59px 43px 63px 46px;
+}
+
+/* -----------------------------------------
+ INFORMATION
+----------------------------------------- */
+.information {
+	
+	&__left {
+		display: inline-block;
+		vertical-align: top;
+		width: 31%;
+		margin-right: 38px;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&__right {
+		display: inline-block;
+		vertical-align: top;
+		width: 60%;
+	}
+
+	&__head {
+		margin-bottom: 35px;
+		
+		&--rating {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__head-wrap {
+		display: inline-block;
+		vertical-align: top;
+		width: 74%;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 32px;
+		text-transform: capitalize;
+	}
+
+	&__foot {
+		margin-top: 60px;
+		text-align: right;
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: top;
+		width: 54%;
+		text-align: right;
+	}
+}
+
+.price {
+	display: inline-block;
+	vertical-align: top;
+	width: 44%;
+	text-align: left;
+	text-transform: uppercase;
+	
+	&__discount {
+		font-size: 12px;
+		font-weight: 700;
+		color: $yellow-color;
+	}
+
+	&__value {
+		font-size: 32px;
+		line-height: 1.1;
+		color: $white-color;
+	}
+}
+
+//Radial progressbar
+.scope {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 64px;
+}
+
+.c100 {
+	float: none;
+	background-color: transparent;
+	
+	&:after {
+		background-color: transparent;
+	}
+
+	& > span {
+		left: 19px;
+		line-height: 3.5em;
+    	font-size: 0.3em;
+		color: $card-text-color;
+		text-align: left;
+	}
+
+	&.small {
+	font-size: 68px;
+}
+
+}
+
+.pie,
+.bar,
+.fill {
+	border-color: $green-color !important;
+}
+
+.rating {
+	margin-top: 25px;
+	text-align: center;
+	
+	&__icon {
+		width: 20px;
+		height: 20px;
+		fill: $rating-color;
+		
+		&--active {
+			fill: $yellow-color;
+		}
+	}
+}
+
+//--Rating-info 
+.rating-info {
+	margin-bottom: 15px;
+	
+	&__title {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	
+	&__item {
+		height: 25px;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		
+		&--wait {
+			height: 4px;
+		}
+	}
+
+	&__value {
+		position: relative;
+		top: -1px;
+		left: -1px;
+		height: 25px;
+		border-radius: 3px;
+		background-color: $green-color;
+		
+		&--wait {
+			height: 4px;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		color: $white-color;
+		transform: translateY(-50%);
+		
+		&--wait {
+			position: static;
+			float: right;
+			margin-top: 12px;
+		}
+	}
+}
